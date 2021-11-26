@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/icons8-samsung-health-48.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar"> 
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item"> 
+                            <span class="header__navbar-title--no-pointer">Hotline đặt hàng</span>  
+                            <i class="header__navbar-icon fas fa-phone-alt header__navbar-title--no-pointer"></i> 
+                            <span class="header__navbar-title--no-pointer">(+84) 0395557279</span>
+                        </li>
+                    </ul>
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item">
+                            <a href="https://goo.gl/maps/3Fcog1hcbLVfHPoj8" target="_blank" rel="noopener" class="header__navbar-item-link"><i class="header__navbar-icon fas fa-map-marker-alt"></i>Địa điểm</i></a>
+                        </li>
+                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separete">Đăng ký</li>
+                        <li class="header__navbar-item header__navbar-item--strong ">Đăng nhập</li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+
+        </div>
+        <footer class="footer">
+
+        </footer>
+    </div>
+    <!-- modal layout -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!-- authen form -->
+            <div class="auth-form ">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Đăng nhập</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Đăng ký</button>
+                        <!-- <h3 class="auth-form__heading">Đăng ký</h3>
+                        <span class="auth-form__switch-btn">Đăng nhập </span> -->
+                    </div>              
+                        <form id="login" class="auth-form__form auth-form__form-login">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn" required>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn"required>
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu"required>
+                            </div>
+                            <div class="auth-form__aside">
+                                <p class="auth-form__policy-text">                               
+                                    <a href="" class="auth-form__text-link">Quên mật khẩu ?</a>
+                                </p>                                   
+                            </div>
+                            <div class="auth-form__controls">
+                                <!-- <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button> -->
+                                <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                            </div>
+                        </form>
+                                            
+                    <form id="register" class="auth-form__form auth-form__form-sign">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="User ID" required>
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="email" class="auth-form__input" placeholder="Email ID"required>
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Phone Number"required>
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu"required>
+                        </div>
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">Bằng việc đăng ký làm thành viên, bạn đã đồng ý với dược phẩm Bảo Ngân về
+                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+                        <div class="auth-form__controls-sign">
+                            <!-- <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button> -->
+                            <button class="btn btn--primary">ĐĂNG KÝ</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="auth-form__socials">
+                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                        <span class="auth-form__socials-title">
+                            Kết nối với facebook
+                        </span>
+                    </a>
+                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
+                        <i class="auth-form__socials-icon fab fa-google"></i>
+                        <span class="auth-form__socials-title">
+                            Kết nối với Google
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="auth-form">
+                        <div class="auth-from__box">
+                            <div class="auth-form__header">
+                                <div id="btn"></div>
+                                <button type="button" class="toggle-btn" onclick="login()">Đăng nhập</button>
+                                <button type="button" class="toggle-btn" onclick="register()">Đăng ký</button>
+                            </div>
+                            <form id="login" class="input-group-login">
+                                <input type="text" class="input-field" placeholder="User ID" required>
+                                <input type="text" class="input-field" placeholder="Enter password" required>
+                                <input type="checkbox" class="check-box"> <span class="input-group--choose--login">Remember Password</span>
+                                <button class="submit-btn">Login</button>
+                            </form>
+                            <form id="register" class="input-group-sign">
+                                <input type="text" class="input-field" placeholder="User ID" required>
+                                <input type="email" class="input-field" placeholder="Email ID" required>
+                                <input type="text" class="input-field" placeholder="Phone ID" required>
+                                <input type="email" class="input-field" placeholder="Enter password" required>
+                                <input type="checkbox" class="check-box"> <span class="input-group--choose--sign">Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản, 
+                                Chính sách dữ liệu và Chính sách cookie của chúng tôi.</span>
+                                <button type="submit" class="submit-btn">Register</button>
+                                
+                            </form>
+                        </div>
+                    </div> -->
+    
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-550px";
+            y.style.left = "55px";
+            z.style.left = "110px";
+        }
+        function login() {
+            x.style.left = "33px";
+            y.style.left = "500px";
+            z.style.left = "0";
+        }
+    </script>
+</body>
+</html>
