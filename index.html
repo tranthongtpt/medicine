@@ -7,8 +7,12 @@
     <title>Medicine</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/icons8-samsung-health-48.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 </head>
@@ -16,150 +20,1009 @@
     <div class="app">
         <header class="header">
             <div class="grid">
-                <nav class="header__navbar"> 
-                    <ul class="header__navbar-list">
-                        <li class="header__navbar-item"> 
-                            <span class="header__navbar-title--no-pointer">Hotline đặt hàng</span>  
-                            <i class="header__navbar-icon fas fa-phone-alt header__navbar-title--no-pointer"></i> 
+                <div class="header__navbar">
+                    <ul class="header__navbar-list ">
+                        <li class="header__navbar-item ">
+                            <span class="header__navbar-title--no-pointer ">Hotline đặt hàng</span>
+                            <i class="header__navbar-icon fas fa-phone-alt header__navbar-title--no-pointer"></i>
                             <span class="header__navbar-title--no-pointer">(+84) 0395557279</span>
                         </li>
                     </ul>
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item">
-                            <a href="https://goo.gl/maps/3Fcog1hcbLVfHPoj8" target="_blank" rel="noopener" class="header__navbar-item-link"><i class="header__navbar-icon fas fa-map-marker-alt"></i>Địa điểm</i></a>
+                            <a href="https://goo.gl/maps/3Fcog1hcbLVfHPoj8" target="_blank" rel="noopener"
+                                class="header__navbar-item-link"><i class="header__navbar-icon fas fa-map-marker-alt"></i>Địa
+                                điểm</i></a>
                         </li>
                         <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separete">Đăng ký</li>
                         <li class="header__navbar-item header__navbar-item--strong ">Đăng nhập</li>
                     </ul>
-                </nav>
+                </div>
+                <!-- header with search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <a href="/">
+                            <img id="header__logo-img" src="./assets/img/logo2.png" alt="bn-logo">
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <form class="search-form">
+                            <input type="search" id="search-box" placeholder="Bạn đang tìm gì hôm nay...">
+                            <label for="search-box" class="fas fa-search"></label>
+                        </form>
+                    </div>
+                    <div class="header__cart-icon">
+                        <i class="header__cart-icon--fov fas fa-heart"></i>
+                        <i class="header__cart-icon--cart fas fa-shopping-cart"></i>
+                        <span class="header__cart-icon--notice">3</span>
+                    </div>
+                </div>
+                <div class="header__search--keyword">
+                    <p class="cursor-point">Thuốc sát khuẩn</p>
+                    <p class="cursor-point">Covid test kit</p>
+                    <p class="cursor-point">Khẩu trang</p>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="navbar">
+                    <ul id="nav">
+                        <li>
+                            <a href="#">
+                                <i class="nav-list fas fa-bars"></i>
+                                Danh mục</li>
+                            </a>
+                        <li> <a href="#">Nhãn hàng<i class="nav-angle-dow fas fa-angle-down"></i></a></li>
+                        <li> <a href="#">Sản phẩm Covid19</a></li>
+                        <li> <a href="#">Dược mỹ phẩm</a></li>
+                        <li> <a href="#">Góc sức khỏe</a></li>
+                        <li> <a href="#">Blog</a></li>
+                        <li> <a href="#">Khuyễn mãi Hot</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
-        <div class="container">
+        <!-- home banner ads -->
+        <section class="home" id="home">
 
-        </div>
-        <footer class="footer">
-
-        </footer>
-    </div>
-    <!-- modal layout -->
-    <div class="modal">
-        <div class="modal__overlay"></div>
-        <div class="modal__body">
-            <!-- authen form -->
-            <div class="auth-form ">
-                <div class="auth-form__container">
-                    <div class="auth-form__header">
-                        <div id="btn"></div>
-                        <button type="button" class="toggle-btn" onclick="login()">Đăng nhập</button>
-                        <button type="button" class="toggle-btn" onclick="register()">Đăng ký</button>
-                        <!-- <h3 class="auth-form__heading">Đăng ký</h3>
-                        <span class="auth-form__switch-btn">Đăng nhập </span> -->
-                    </div>              
-                        <form id="login" class="auth-form__form auth-form__form-login">
-                            <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="Email của bạn" required>
-                            </div>
-                            <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn"required>
-                            </div>
-                            <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu"required>
-                            </div>
-                            <div class="auth-form__aside">
-                                <p class="auth-form__policy-text">                               
-                                    <a href="" class="auth-form__text-link">Quên mật khẩu ?</a>
-                                </p>                                   
-                            </div>
-                            <div class="auth-form__controls">
-                                <!-- <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button> -->
-                                <button class="btn btn--primary">ĐĂNG NHẬP</button>
-                            </div>
-                        </form>
-                                            
-                    <form id="register" class="auth-form__form auth-form__form-sign">
-                        <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="User ID" required>
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="email" class="auth-form__input" placeholder="Email ID"required>
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="Phone Number"required>
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu"required>
-                        </div>
-                        <div class="auth-form__aside">
-                            <p class="auth-form__policy-text">Bằng việc đăng ký làm thành viên, bạn đã đồng ý với dược phẩm Bảo Ngân về
-                                <a href="" class="auth-form__text-link">Điều khoản dịch vụ</a> &
-                                <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
-                            </p>
-                        </div>
-                        <div class="auth-form__controls-sign">
-                            <!-- <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button> -->
-                            <button class="btn btn--primary">ĐĂNG KÝ</button>
-                        </div>
-                    </form>
-
+            <div class="row">
+        
+                <div class="content">
+                    <h3>giảm giá 70%</h3>
+                    <p>Sứ mệnh của chung tôi luôn giúp các bạn có thể mua bất kì loại thuốc ở bất kì đâu, an toàn, tiện lợi và đặt biệt hợp túi tiền với mọi người. Vì cuộc sống khỏe đẹp hơn</p>
+                    <a href="#" class="btn">shop now</a>
                 </div>
-                <div class="auth-form__socials">
-                    <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with-icon">
-                        <i class="auth-form__socials-icon fab fa-facebook-square"></i>
-                        <span class="auth-form__socials-title">
-                            Kết nối với facebook
-                        </span>
+        
+                <div class="swiper drug-slider">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide"><img src="./assets/img/product-banner-sale-removebg-preview.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/product-banner-sale1-removebg-preview.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/product-banner-sale2-removebg-preview.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/product-banner-sale3-removebg-preview.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/product-banner-sale4-removebg-preview.png" alt=""></a>
+                        <a href="#" class="swiper-slide"><img src="./assets/img/product-banner-sale5-removebg-preview.png" alt=""></a>
+                    </div>
+                    <img src="img/stand.png" class="stand" alt="">
+                </div>
+        
+            </div>
+        
+        </section>
+        <!-- container -->
+        <section class="container">
+            <div class="category-list">
+                <div class="category-list__header">
+                    
+                    <p class="category-list__header-title"><img class="icon__title" src="assets/img/text-editor-icon.png" alt="">Danh mục sản phẩm</p>
+                </div>
+                <div class="category-list__body">
+                        <ul class="slider-list">
+                            <li class="slider-slide">
+                                <div class="categorylist-category-item">
+                                    <img src="./assets/img/img-list-item1.png" alt="">
+                                    <p>Dược phẩm</p>
+                                </div>
+                            </li>
+                            <li class="slider-slide">
+                                <div class="categorylist-category-item">
+                                    <img src="./assets/img/img-list-item2.png" alt="">
+                                    <p>Chăm sóc sức khỏe</p>
+                                </div>
+                            </li>
+                            <li class="slider-slide">
+                                <div class="categorylist-category-item">
+                                    <img src="./assets/img/img-list-item3.png" alt="">
+                                    <p>Chăm sóc cá nhân</p>
+                                </div>
+                            </li>
+                            <li class="slider-slide">
+                                <div class="categorylist-category-item">
+                                    <img src="./assets/img/img-list-item24.png" alt="">
+                                    <p>Sản phẩm tiện lợi</p>
+                                </div>
+                            </li>
+                            <li class="slider-slide">
+                                <div class="categorylist-category-item">
+                                    <img src="./assets/img/img-list-item5.png" alt="">
+                                    <p>Thực phẩm chức năng</p>
+                                </div>
+                            </li>
+                            <li class="slider-slide">
+                                <div class="categorylist-category-item">
+                                    <img src="./assets/img/img-list-item6.png" alt="">
+                                    <p>Mẹ và Bé</p>
+                                </div>
+                            </li>
+                            <li class="slider-slide">
+                                <div class="categorylist-category-item">
+                                    <img src="./assets/img/img-list-item7.png" alt="">
+                                    <p>Chăm sóc sắc đẹp</p>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+            </div>          
+        </section>
+        <!-- feautured section -->
+        <section class="category-list-hotsale">
+            <div class="category-list__header">
+                <p class="category-list__header-title"><img class="icon__title" src="assets/img/Protect-Green-icon.png" alt="">Tăng sức đề khán mùa dịch</p>
+                <p class="category-list__header-title cl-white view-all-products">Xem tất cả ></p>
+            </div>
+
+            <div class="recommand-block">
+                <div class="recommand-block-list">
+                    <!-- ten tung san pham -->
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <!-- css productItem_head co roi  -->
+                                <div class="productItem_head">
+                                    <!-- productItem_head co roi -->
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!-- productItem_head co roi -->
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                        <!-- co roi -->
+                                    </div>
+                                    <!-- chua co -->
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <!-- css productItem_head co roi  -->
+                                <div class="productItem_head">
+                                    <!-- productItem_head co roi -->
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!-- productItem_head co roi -->
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                        <!-- co roi -->
+                                    </div>
+                                    <!-- chua co -->
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <!-- css productItem_head co roi  -->
+                                <div class="productItem_head">
+                                    <!-- productItem_head co roi -->
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!-- productItem_head co roi -->
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                        <!-- co roi -->
+                                    </div>
+                                    <!-- chua co -->
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <!-- css productItem_head co roi  -->
+                                <div class="productItem_head">
+                                    <!-- productItem_head co roi -->
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!-- productItem_head co roi -->
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                        <!-- co roi -->
+                                    </div>
+                                    <!-- chua co -->
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <!-- css productItem_head co roi  -->
+                                <div class="productItem_head">
+                                    <!-- productItem_head co roi -->
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <!-- productItem_head co roi -->
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                        <!-- co roi -->
+                                    </div>
+                                    <!-- chua co -->
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+     
+    
+                </div>
+            </div>
+        </section>
+
+        <!-- all product -->
+
+        <section class="container-product">
+            <div class="recommand-block">
+                <p class="category-list__header-title"><img class="icon__title" src="assets/img/google-keep-icon.png" alt="">Gợi ý hôm nay</p>
+                <!-- <span style="font-weight: 700;font-size: 2rem;"><img class="icon__title" src="assets/img/google-keep-icon.png" alt="">Gợi ý hôm nay</span> -->
+                
+                <div class="recommand-block__body">
+                    <ul class="recommand-block__body-list">
+                        
+                        <li class="recommand-block__body-list--item">
+                            <div class="block-item col-red">
+                                <i class="fas fa-fire-alt"></i>
+                                <span class="recommand-name">Tất cả</span>
+                            </div>
+                        </li>
+                        <li class="recommand-block__body-list--item">
+                            <div class="block-item">
+                                <img src="./assets/img/img-list-item1.png" alt="">
+                                <span class="recommand-name">Chăm sóc cá nhân</span>
+                            </div>
+                        </li>
+                        <li class="recommand-block__body-list--item">
+                            <div class="block-item">
+                                <img src="./assets/img/img-list-item2.png" alt="">
+                                <span class="recommand-name">Chăm sóc cá nhân</span>
+                            </div>
+                        </li>
+                        <li class="recommand-block__body-list--item">
+                            <div class="block-item">
+                                <img src="./assets/img/img-list-item24.png" alt="">
+                                <span class="recommand-name">Chăm sóc cá nhân</span>
+                            </div>
+                        </li>
+                        <li class="recommand-block__body-list--item">
+                            <div class="block-item">
+                                <img src="./assets/img/img-list-item3.png" alt="">
+                                <span class="recommand-name">Chăm sóc cá nhân</span>
+                            </div>
+                        </li>
+                        <li class="recommand-block__body-list--item">
+                            <div class="block-item">
+                                <img src="./assets/img/img-list-item5.png" alt="">
+                                <span class="recommand-name">Chăm sóc cá nhân</span>
+                            </div>
+                        </li>
+                        <li class="recommand-block__body-list--item">
+                            <div class="block-item">
+                                <img src="./assets/img/img-list-item6.png" alt="">
+                                <span class="recommand-name">Chăm sóc cá nhân</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recommand-block-list">
+                    <!-- ten tung san pham -->
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lazyload-wrapper ">
+                        <div class="recommand_list-item__big">
+                            <div class="ProductItem_product-item">
+                                <div class="productItem_head">
+                                    <div class="productItem_image">
+                                        <img src="./assets/img/Product-thumbnail-224x224_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="productItem_body">
+                                    <div class="productItem_brand-null"></div>
+                                    <div class="productItem_title">Bàn chải đánh răng P/S chăm sóc nướu chứa muối tre</div>
+                                    <div class="productItem_original-price"></div>
+                                    <div class="productItem_discount-price">
+                                        28.000 VND/
+                                        <span class="ProductItem_discount-price-style">Cây</span>
+                                    </div>
+                                    <span class="productItem_link"></span>
+                                    <button class="productItem_add-to-card" style="position: relative; z-index:2;">Thêm vào
+                                        giỏ
+                                        hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- brand -->
+        <section class="Outstanding-Brand">
+            <div class="container">
+                <div class="Outstanding-Brand__header">
+                    <img class="icon__title" src="assets/img/Protect-Green-icon.png" alt="">
+                    <h2>Thương hiệu nổi bật</h2>
+                </div>
+                <div class="Outstanding-Brand__body">
+                    <!-- swiper -->
+                    <div class="Outstanding-Brand-slider">
+                        
+                        <div class="swiper-container mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/img/2_Sanofi_GEM.png" alt="">
+                                    <h4>Bao Ngan City</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ads -->
+        <div class="ads">
+            <img src="assets/img/banner covid.png" alt="">
+        </div>
+        <!-- end ads -->
+        <!-- icon container start -->
+        <section class="icon-container">
+            <div class="icons">
+                <i class="fas fa-shipping-fast"></i>
+                <div class="content-icon">
+                    <h3>Miễn phí vận chuyển</h3>
+                    <p>Áp dụng cho đơn hàng trên 5 xị</p>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fas fa-capsules"></i>
+                <div class="content-icon">
+                    <h3>Thuốc tốt giá rẻ</h3>
+                    <p>Bán ra thị trường giá gốc</p>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fas fa-user-shield"></i>
+                <div class="content-icon">
+                    <h3>Cam kết 100%</h3>
+                    <p>Đặt chất lượng lên hàng đầu</p>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fas fa-check-circle"></i>
+                <div class="content-icon">
+                    <h3>Thuốc chính hãng</h3>
+                    <p>Bảm đảm an toàn, uy tín</p>
+                </div>
+            </div>
+        </section>
+        <!-- icon cantainer end -->
+        <!-- newsletter section starts -->
+        <section class="newsemail">
+            <form action="">
+                <h3>Nhập Email để nhận thông tin khuyến mãi từ BaoNgan</h3>
+                <input type="email" name="" placeholder="Enter your email" id="" class="box" required>
+                <input type="submit" value="subscribe" class="btn">
+            </form>
+        </section>
+        <!-- newsletter section end -->
+        <!-- footer start -->
+        <section class="footer">
+            <div class="box-container">
+
+                <div class="box">
+                    <h1>QUẦY THUỐC BẢO NGÂN</h1>
+                    <p class="font-in-box">Tại đây chúng tôi luôn tận tâm phục vụ và được đào tạo để hoàn thành xuất sắc những sứ mệnh được giao. Đưa những loại thuốc tốt nhất đến tay người tiêu dùng.</p>
+                </div>
+
+                <div class="box">
+                    <h3>Liên kết hữu ích</h3>
+                    <a href="#">
+                        <i class="fas fa-arrow-right"></i>Câu hỏi thằng gặp
                     </a>
-                    <a href="" class="auth-form__socials--google btn btn--size-s btn--with-icon">
-                        <i class="auth-form__socials-icon fab fa-google"></i>
-                        <span class="auth-form__socials-title">
-                            Kết nối với Google
-                        </span>
+                    <a href="#">
+                        <i class="fas fa-arrow-right"></i>Chính sách giao hàng
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-arrow-right"></i>Thành viên
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-arrow-right"></i>Chính sách bảo mật
+                    </a>
+                </div>
+
+                <div class="box">
+                    <h3>Chứng nhận của chúng tôi</h3>
+                    <a href="#">
+                        <img class="imageChange" src="assets/img/bo-cong-thuong.svg" alt="">
+                    </a>
+                </div>
+                <div class="box">
+                    <h3>Thông tin về chúng tôi</h3>
+                    <a href="#">
+                        <i class="fas fa-phone"></i>(+84) 0395557279
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-envelope"></i>thongn311@gmail.com
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-map-marked-alt"></i>Địa chỉ: Việt Nam
+                        <img class="map" src="assets/img/worldmap.png" alt="">
                     </a>
                 </div>
             </div>
-            <!-- <div class="auth-form">
-                        <div class="auth-from__box">
-                            <div class="auth-form__header">
-                                <div id="btn"></div>
-                                <button type="button" class="toggle-btn" onclick="login()">Đăng nhập</button>
-                                <button type="button" class="toggle-btn" onclick="register()">Đăng ký</button>
-                            </div>
-                            <form id="login" class="input-group-login">
-                                <input type="text" class="input-field" placeholder="User ID" required>
-                                <input type="text" class="input-field" placeholder="Enter password" required>
-                                <input type="checkbox" class="check-box"> <span class="input-group--choose--login">Remember Password</span>
-                                <button class="submit-btn">Login</button>
-                            </form>
-                            <form id="register" class="input-group-sign">
-                                <input type="text" class="input-field" placeholder="User ID" required>
-                                <input type="email" class="input-field" placeholder="Email ID" required>
-                                <input type="text" class="input-field" placeholder="Phone ID" required>
-                                <input type="email" class="input-field" placeholder="Enter password" required>
-                                <input type="checkbox" class="check-box"> <span class="input-group--choose--sign">Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản, 
-                                Chính sách dữ liệu và Chính sách cookie của chúng tôi.</span>
-                                <button type="submit" class="submit-btn">Register</button>
-                                
-                            </form>
-                        </div>
-                    </div> -->
-    
-        </div>
+            <div class="share">
+                    <img class="imglogo" src="assets/img/image-fz-f.png" alt="">
+                    <img class="imglogo" src="assets/img/image-fz-z.png" alt="">
+            </div>
+            <div class="credit">
+                <p>© 2021 Công ty Cổ Phần Dược Phẩm Bảo Ngân Số ĐKKD xxxxxxxxxx cấp ngày xx/xx/2021 tại Sở Kế hoạch Đầu tư TPHCM
+                    Địa chỉ: xxx TP. HCM. Số điện thoại: (+84) 0395557279
+                    Email: sale@nhathuoclongchau.com - Người quản lý nội dung: Nhóm chúa hề</p>
+            </div>
+        </section>
+        <!-- footer end -->
     </div>
-    <script>
-        var x = document.getElementById("login");
-        var y = document.getElementById("register");
-        var z = document.getElementById("btn");
-
-        function register() {
-            x.style.left = "-550px";
-            y.style.left = "55px";
-            z.style.left = "110px";
-        }
-        function login() {
-            x.style.left = "33px";
-            y.style.left = "500px";
-            z.style.left = "0";
-        }
-    </script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
+

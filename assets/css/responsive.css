@@ -1,0 +1,16 @@
+
+/* pc 1024px*/
+@media (min-width:64em){
+    
+     /* .container{
+        max-width: 1215px;
+    } */
+} 
+/* tablet & moblie 1023px */
+@media (max-width:63.9375em){
+    
+}
+/* mobile 739px */
+@media (max-width: 46.1875em){
+    
+}
