@@ -30,31 +30,27 @@
                     </ul>
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item">
-                            <a href="https://goo.gl/maps/3Fcog1hcbLVfHPoj8" target="_blank" rel="noopener"
-                                class="header__navbar-item-link"><i class="header__navbar-icon fas fa-map-marker-alt"></i>Địa
-                                điểm</i></a>
-                        </li>
-                        <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separete">Đăng ký</li>
-                        <li class="header__navbar-item header__navbar-item--strong ">Đăng nhập</li>
+                            <a href="https://goo.gl/maps/3Fcog1hcbLVfHPoj8" target="_blank" rel="noopener">
+                                <i class="header__navbar-icon fas fa-map-marker-alt"></i>Địa điểm</i></a>
+                            </li>
+                        <li class="header__navbar-item">Đăng ký</li>
+                        <li class="header__navbar-item">Đăng nhập</li>
                     </ul>
                 </div>
                 <!-- header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
                         <a href="/">
-                            <img id="header__logo-img" src="./assets/img/logo2.png" alt="bn-logo">
+                            <img src="./assets/img/logo2.png" alt="bn-logo">
                         </a>
-                    </div>
-                    <div class="header__search">
                         <form class="search-form">
-                            <input type="search" id="search-box" placeholder="Bạn đang tìm gì hôm nay...">
+                            <input type="search" id="search-box" placeholder="Bạn đang tìm gì hôm nay..." required>
                             <label for="search-box" class="fas fa-search"></label>
                         </form>
-                    </div>
                     <div class="header__cart-icon">
-                        <i class="header__cart-icon--fov fas fa-heart"></i>
-                        <i class="header__cart-icon--cart fas fa-shopping-cart"></i>
-                        <span class="header__cart-icon--notice">3</span>
+                        <i class="fas fa-heart"></i>
+                        <span class="header__cart-icon--notice">0</span>
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="header__cart-icon--notice">0</span>
                     </div>
                 </div>
                 <div class="header__search--keyword">
@@ -64,21 +60,15 @@
                 </div>
             </div>
             <div class="main-menu">
-                <div class="navbar">
-                    <ul id="nav">
-                        <li>
-                            <a href="#">
-                                <i class="nav-list fas fa-bars"></i>
-                                Danh mục</li>
-                            </a>
-                        <li> <a href="#">Nhãn hàng<i class="nav-angle-dow fas fa-angle-down"></i></a></li>
-                        <li> <a href="#">Sản phẩm Covid19</a></li>
-                        <li> <a href="#">Dược mỹ phẩm</a></li>
-                        <li> <a href="#">Góc sức khỏe</a></li>
-                        <li> <a href="#">Blog</a></li>
-                        <li> <a href="#">Khuyễn mãi Hot</a></li>
-                    </ul>
-                </div>
+                <nav class="navbar">
+                    <a href="#"><i class="fas fa-bars"></i>Danh mục</a>
+                    <a href="#">Nhãn hàng<i class="pd-l fas fa-angle-down"></i></a>
+                    <a href="#">Sản phẩm Covid19</a>
+                    <a href="#">Dược mỹ phẩm</a>
+                    <a href="#">Góc sức khỏe</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Khuyễn mãi Hot</a>
+                </nav>
             </div>
         </header>
         <!-- home banner ads -->
@@ -1021,6 +1011,7 @@
         </section>
         <!-- footer end -->
     </div>
+    <script type="text/javascript" src="http://www.maytinhhtl.com/images/code/snowstorm.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

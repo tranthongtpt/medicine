@@ -13,6 +13,25 @@ function login() {
     z.style.left = "0";
 }
 
+window.onscroll = () =>{
+
+  if(window.scrollY > 80){
+    document.querySelector('.header .main-menu').classList.add('active');
+  }else{
+    document.querySelector('.header .main-menu').classList.remove('active');
+  }
+
+}
+
+window.onload = () =>{
+
+  if(window.scrollY > 80){
+    document.querySelector('.header .main-menu').classList.add('active');
+  }else{
+    document.querySelector('.header .main-menu').classList.remove('active');
+  }
+
+}
 
 var swiper = new Swiper(".drug-slider", {
   loop:true,

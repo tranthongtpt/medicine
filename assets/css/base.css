@@ -14,7 +14,8 @@
     --border:.1rem solid rgba(0,0,0,.5);
     --border-hover:.1rem solid var(--black);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-    --xanh-color:#3054b7;
+    --bridge-blue:#3054b7;
+    --mau-backgroundheader:linear-gradient(0,#0DD297,#04D26F);
 }
 
 *{
@@ -140,4 +141,7 @@ img{
 }
 .value-nul{
     display: none;
+}
+.pd-l{
+    padding-left: 1rem;
 }
